@@ -12,11 +12,13 @@
     </head>
     <body>
         <div id= "root">
-            <ol>
-                <li >
-                    {{email}}
-                </li>
-            </ol>
+            <div class="container-list" v-if="arrayEmail.length = totalEmail" v-for="email in arrayEmail">
+                <ol >
+                    <li  >
+                        {{email}}
+                    </li>
+                </ol>
+            </div>
         </div>
 
 

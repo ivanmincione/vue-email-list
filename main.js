@@ -5,17 +5,22 @@ var app = new Vue ({
     el: '#root',
     data: {
         email: false,
-        arrayEmail: [],
-        i: 0,
+        arrayEmail:[],
+        totalEmail : 10,
     },
 
     mounted() {
         const self = this;
-        axios
+        for (var i = 0; i < this.totalEmail; i++) {
+            axios
             .get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then(function(risposta) {
+                // assegno la risposta ottenuta alla variabile email
                 self.email = risposta.data.response;
+                // pusho nell'array vuoto
+                self.arrayEmail.push(self.email)
             });
+        };
     },
 
 //end vue
