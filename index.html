@@ -12,9 +12,9 @@
     </head>
     <body>
         <div id= "root">
-            <div class="container-list" v-if="arrayEmail.length = totalEmail" v-for="email in arrayEmail">
+            <div class="container-list" v-if="arrayEmail.length == totalEmail" >
                 <ol >
-                    <li  >
+                    <li v-for="email in arrayEmail">
                         {{email}}
                     </li>
                 </ol>
