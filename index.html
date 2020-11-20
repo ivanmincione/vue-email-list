@@ -11,10 +11,10 @@
         <title>Vue Email List</title>
     </head>
     <body>
-        <div id= "root">
+        <div id="root">
             <div class="container-list" v-if="arrayEmail.length == totalEmail" >
                 <ol >
-                    <li v-for="email in arrayEmail">
+                    <li class="btn" v-for="email in arrayEmail">
                         {{email}}
                     </li>
                 </ol>
