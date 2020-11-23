@@ -17,8 +17,13 @@ var app = new Vue ({
             .then(function(risposta) {
                 // assegno la risposta ottenuta alla variabile email
                 self.email = risposta.data.response;
-                // pusho nell'array vuoto
-                self.arrayEmail.push(self.email)
+
+                if (!self.arrayEmail.includes(self.email)) {
+                    // pusho nell'array vuoto
+                    self.arrayEmail.push(self.email);
+                } else {
+                    i--;
+                }
             });
         };
     },
